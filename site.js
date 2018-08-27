@@ -22,7 +22,7 @@ app.post('/', function(req, res){
    console.log(req.body);
    var kafka = require('kafka-node'),
    Producer = kafka.Producer,
-   client = new kafka.Client('192.168.99.100:2181'),
+   client = new kafka.Client('kafka:2181'),
    producer = new Producer(client);
 
    client.on('ready', function (){
