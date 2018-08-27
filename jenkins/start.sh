@@ -24,4 +24,6 @@ cat /tmp/mysec.xml | java -jar /tmp/jenkins-cli.jar -s http://localhost:8080 -au
 rm -rf /tmp/mysec.xml
 echo "creating firstjob"
 java -jar /tmp/jenkins-cli.jar -s http://localhost:8080 -auth admin:$PASSWORD create-job firstjob < /tmp/sample.xml
+echo "creating secondjob"
+java -jar /tmp/jenkins-cli.jar -s http://localhost:8080 -auth admin:$PASSWORD create-job secondjob < /tmp/sample2.xml
 tail -f /dev/null
