@@ -1,0 +1,21 @@
+html
+   head
+      title Kafka Tester
+      meta(name="viewport",content="width=device-width, initial-scale=1")
+      link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+      script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+      script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+   body
+      div(class="container")
+        img(src="images/logo.png", alt="kafka", class="navbar-brand")
+        h2 Enter message to be submitted
+        form(action = "/", method = "POST")
+            div(class="form-group")
+                label(for = "topic") Topic Name:
+                input(name = "topic" class="form-control" placeholder="if the topic doesn't exist, it will be created")
+            br
+            div(class="form-group")
+                label(for = "messages") Message:
+                input(name = "messages[]" class="form-control" placeholder="type your message here...")
+            br
+            button(type = "submit" class="btn btn-default") Submit

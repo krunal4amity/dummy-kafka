@@ -1,0 +1,14 @@
+version: '2'
+services:
+  node:
+    restart: always
+    build: .
+    ports:
+      - '80:3000'
+    depends_on:
+      - kafka
+  kafka:
+    image: krunal4amity/demokafka:v2
+    ports:
+      - '2181:2181'
+      - '9092:9092'

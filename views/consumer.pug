@@ -1,0 +1,9 @@
+html
+    head
+        title Consumer page
+    body
+        p Topic you submitted to is = !{topic}
+        p Message you sent is = !{messages}
+        p Please use the following command on the kafka host to view the messages being sent. 
+        b kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic "your topic name" --from-beginning
+        p Try to push another message to the same topic and watch it show up on kafka.
