@@ -11,7 +11,8 @@ RUN wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add 
 	apt-get update && \
 	apt-get install jenkins -y && \
 	apt-get clean all && \
-	dos2unix /tmp/start.sh /tmp/mysec.xml /tmp/sample.xml /tmp/sample2.xml
+	dos2unix /tmp/start.sh /tmp/mysec.xml /tmp/sample.xml /tmp/sample2.xml && \
+	chmod 755 /tmp/start.sh
 RUN curl -fsSL https://get.docker.com | sh && \
 	curl -L https://github.com/docker/compose/releases/download/1.22.0-rc2/docker-compose-`uname -s`-`uname -m` -o /usr/bin/docker-compose && \
     chmod +x /usr/bin/docker-compose
